@@ -1,3 +1,4 @@
 class Restaurant < ApplicationRecord
-  belongs_to :review_restaurants
+  has_many :review_restaurants
+  belongs_to_many :mealrestaurants
 end
