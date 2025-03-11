@@ -109,7 +109,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_142519) do
   add_foreign_key "mealrestaurants", "meals", column: "meals_id"
   add_foreign_key "mealrestaurants", "restaurants", column: "restaurants_id"
   add_foreign_key "meals", "recipes", column: "recipes_id"
-  add_foreign_key "proportions", "ingredients", column: "ingredients_id"
+  ad d_foreign_key "proportions", "ingredients", column: "ingredients_id"
   add_foreign_key "proportions", "recipes", column: "recipes_id"
   add_foreign_key "review_restaurants", "restaurants", column: "restaurants_id"
   add_foreign_key "review_restaurants", "users", column: "users_id"
