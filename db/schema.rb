@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_11_131600) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_11_132622) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -57,9 +57,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_131600) do
     t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "recipe_id", null: false
+    t.bigint "recipes_id"
     t.index ["ingredients_id"], name: "index_proportions_on_ingredients_id"
-    t.index ["recipe_id"], name: "index_proportions_on_recipe_id"
+    t.index ["recipes_id"], name: "index_proportions_on_recipes_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -99,6 +99,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_131600) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nickname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -109,7 +110,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_131600) do
   add_foreign_key "mealrestaurants", "restaurants", column: "restaurants_id"
   add_foreign_key "meals", "recipes", column: "recipes_id"
   add_foreign_key "proportions", "ingredients", column: "ingredients_id"
-  add_foreign_key "proportions", "recipes"
+  add_foreign_key "proportions", "recipes", column: "recipes_id"
   add_foreign_key "restaurants", "review_restaurants", column: "review_restaurants_id"
   add_foreign_key "review_restaurants", "users", column: "users_id"
 end
