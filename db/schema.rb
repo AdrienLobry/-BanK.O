@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_11_114926) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_11_131600) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,15 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_114926) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "mealrestaurants", force: :cascade do |t|
+    t.bigint "meals_id", null: false
+    t.bigint "restaurants_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meals_id"], name: "index_mealrestaurants_on_meals_id"
+    t.index ["restaurants_id"], name: "index_mealrestaurants_on_restaurants_id"
   end
 
   create_table "meals", force: :cascade do |t|
@@ -61,6 +70,17 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_114926) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
+    t.string "phone_number"
+    t.string "photo"
+    t.bigint "review_restaurants_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "address"
+    t.index ["review_restaurants_id"], name: "index_restaurants_on_review_restaurants_id"
+  end
+
   create_table "review_restaurants", force: :cascade do |t|
     t.bigint "users_id", null: false
     t.string "title"
@@ -85,8 +105,11 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_114926) do
 
   add_foreign_key "favorite_lists", "meals", column: "meals_id"
   add_foreign_key "favorite_lists", "users", column: "users_id"
+  add_foreign_key "mealrestaurants", "meals", column: "meals_id"
+  add_foreign_key "mealrestaurants", "restaurants", column: "restaurants_id"
   add_foreign_key "meals", "recipes", column: "recipes_id"
   add_foreign_key "proportions", "ingredients", column: "ingredients_id"
   add_foreign_key "proportions", "recipes"
+  add_foreign_key "restaurants", "review_restaurants", column: "review_restaurants_id"
   add_foreign_key "review_restaurants", "users", column: "users_id"
 end
