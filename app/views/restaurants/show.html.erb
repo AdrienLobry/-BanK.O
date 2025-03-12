@@ -1,0 +1,9 @@
+<div class="container-card-restaurant">
+  <div class="card-restaurant-show">
+    <%= image_tag "#{@restaurant.photo}", alt: "Photo" %>
+    <h2><%= @restaurant.name.capitalize %></h2>
+    <h5><%= @restaurant.address.capitalize %></h5>
+    <a href="tel:<%=@restaurant.phone_number%>"><h5><%= @restaurant.phone_number%></h5></a>
+    <p><%= @restaurant.description.capitalize %></p>
+  </div>
+</div>

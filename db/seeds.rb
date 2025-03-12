@@ -8,7 +8,8 @@ puts 'Cleaning Restaurant DB'
     name: "l'assiette du marché",
     address: "25 rue de poivreaux, 59000 Lille",
     phone_number: "0625252525",
-    photo: "https://imgs.search.brave.com/bN4lKF8N1VZ4BGntVgfuIOvvW7kjFDRvmS7Jk-paHe4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGFnZXNqYXVuZXMu/ZnIvbWVkaWEvYWdj/L2Nyb3AvMjAweDIw/MC8xMi80ZS85NS8w/MC8wMC82Yi80My83/OC9lOC85Ni82MTA1/MTI0ZTk1MDAwMDZi/NDM3OGU4OTYvNjEw/NTEyNGU5NTAwMDA2/YjQzNzhlODk3Lmpw/Zz92PTI"
+    photo: "https://imgs.search.brave.com/bN4lKF8N1VZ4BGntVgfuIOvvW7kjFDRvmS7Jk-paHe4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGFnZXNqYXVuZXMu/ZnIvbWVkaWEvYWdj/L2Nyb3AvMjAweDIw/MC8xMi80ZS85NS8w/MC8wMC82Yi80My83/OC9lOC85Ni82MTA1/MTI0ZTk1MDAwMDZi/NDM3OGU4OTYvNjEw/NTEyNGU5NTAwMDA2/YjQzNzhlODk3Lmpw/Zz92PTI",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Ò"
   )
   restaurant.save
 
