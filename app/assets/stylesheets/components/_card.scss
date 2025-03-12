@@ -1,0 +1,39 @@
+.card-restaurant-show {
+  background-color: #E9BA79;
+  padding: 20px 20px;
+  width: 80vw;
+  margin: 0px 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.250);
+
+  img {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.250);
+  }
+
+  h2 {
+    font-family: Bowlby One;
+    color: #582D1D;
+    margin-bottom: 15px;
+  }
+
+  h5 {
+    font-family: Open Sans;
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-family: Open Sans;
+    color: black
+  }
+
+  p {
+    font-family: Open Sans;
+    margin-bottom: 0px;
+  }
+
+}
