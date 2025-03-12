@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_11_151410) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_11_150439) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "favorite_lists", force: :cascade do |t|
     t.string "title"
     t.string "localisation"
-    t.bigint "meals_id", null: false
-    t.bigint "users_id", null: false
+    t.bigint "meal_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["meals_id"], name: "index_favorite_lists_on_meals_id"
-    t.index ["users_id"], name: "index_favorite_lists_on_users_id"
+    t.index ["meal_id"], name: "index_favorite_lists_on_meal_id"
+    t.index ["user_id"], name: "index_favorite_lists_on_user_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -32,12 +32,12 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_151410) do
   end
 
   create_table "meal_restaurants", force: :cascade do |t|
-    t.bigint "meals_id", null: false
-    t.bigint "restaurants_id", null: false
+    t.bigint "meal_id", null: false
+    t.bigint "restaurant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["meals_id"], name: "index_meal_restaurants_on_meals_id"
-    t.index ["restaurants_id"], name: "index_meal_restaurants_on_restaurants_id"
+    t.index ["meal_id"], name: "index_meal_restaurants_on_meal_id"
+    t.index ["restaurant_id"], name: "index_meal_restaurants_on_restaurant_id"
   end
 
   create_table "meals", force: :cascade do |t|
@@ -45,21 +45,21 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_151410) do
     t.text "description"
     t.string "photo"
     t.string "localisation"
-    t.bigint "recipes_id", null: false
+    t.bigint "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipes_id"], name: "index_meals_on_recipes_id"
+    t.index ["recipe_id"], name: "index_meals_on_recipe_id"
   end
 
   create_table "proportions", force: :cascade do |t|
-    t.bigint "ingredients_id", null: false
+    t.bigint "ingredient_id", null: false
     t.string "unit"
     t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "recipes_id"
-    t.index ["ingredients_id"], name: "index_proportions_on_ingredients_id"
-    t.index ["recipes_id"], name: "index_proportions_on_recipes_id"
+    t.bigint "recipe_id"
+    t.index ["ingredient_id"], name: "index_proportions_on_ingredient_id"
+    t.index ["recipe_id"], name: "index_proportions_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -77,8 +77,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_151410) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
-    t.bigint "review_restaurants_id", null: false
-    t.index ["review_restaurants_id"], name: "index_restaurants_on_review_restaurants_id"
   end
 
   create_table "review_restaurants", force: :cascade do |t|
@@ -87,10 +85,10 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_151410) do
     t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "restaurants_id", null: false
-    t.bigint "users_id", null: false
-    t.index ["restaurants_id"], name: "index_review_restaurants_on_restaurants_id"
-    t.index ["users_id"], name: "index_review_restaurants_on_users_id"
+    t.bigint "restaurant_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["restaurant_id"], name: "index_review_restaurants_on_restaurant_id"
+    t.index ["user_id"], name: "index_review_restaurants_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -106,14 +104,13 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_11_151410) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "favorite_lists", "meals", column: "meals_id"
-  add_foreign_key "favorite_lists", "users", column: "users_id"
-  add_foreign_key "meal_restaurants", "meals", column: "meals_id"
-  add_foreign_key "meal_restaurants", "restaurants", column: "restaurants_id"
-  add_foreign_key "meals", "recipes", column: "recipes_id"
-  add_foreign_key "proportions", "ingredients", column: "ingredients_id"
-  add_foreign_key "proportions", "recipes", column: "recipes_id"
-  add_foreign_key "restaurants", "review_restaurants", column: "review_restaurants_id"
-  add_foreign_key "review_restaurants", "restaurants", column: "restaurants_id"
-  add_foreign_key "review_restaurants", "users", column: "users_id"
+  add_foreign_key "favorite_lists", "meals"
+  add_foreign_key "favorite_lists", "users"
+  add_foreign_key "meal_restaurants", "meals"
+  add_foreign_key "meal_restaurants", "restaurants"
+  add_foreign_key "meals", "recipes"
+  add_foreign_key "proportions", "ingredients"
+  add_foreign_key "proportions", "recipes"
+  add_foreign_key "review_restaurants", "restaurants"
+  add_foreign_key "review_restaurants", "users"
 end
