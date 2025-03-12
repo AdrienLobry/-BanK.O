@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :restaurants, only: [:index]
   resources :recipes, only: [:show]
+  resources :meals, only: [:index, :show]
 end

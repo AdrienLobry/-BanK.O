@@ -1,0 +1,13 @@
+<h1><%= @meal.name %></h1>
+
+<div>
+  <div>
+    <%= image_tag(@meal.photo, alt: @meal.name)%>
+  </div>
+  <div>
+    <p><strong>ID:</strong> <%= @meal.id %></p>
+    <!-- Ajoutez d'autres détails ici si nécessaire -->
+  </div>
+</div>
+
+<%= link_to 'Retour à la liste', meals_path %>
