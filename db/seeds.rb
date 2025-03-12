@@ -47,7 +47,7 @@ puts 'Cleaning Meal DB'
 
   Il est traditionnellement servi sur une tranche de pain grillé et passé au four. En France, le welsh est typiquement servi dans les brasseries du Nord et du Pas-de-Calais, où il est désormais bien ancré dans la culture régionale.",
   photo: "https://assets.afcdn.com/recipe/20200113/106493_w1024h768c1cx640cy360cxt0cyt0cxb1280cyb720.png",
-  localisation: "59000",
+  localisation: "4 Av. des Saules Euratechnologies - Doge B, 59160 Lille",
   recipe: Recipe.first
  )
  meal.save
@@ -56,3 +56,14 @@ puts 'Cleaning Meal DB'
 end
 
   puts "#{Meal.count} Has been Created !"
+
+meal = Meal.new(
+  name: "Le Bar En Croute",
+  description: "Le welsh, aussi appelé welsh rabbit ou welsh rarebit1 ou parfois croque gallois2, est un plat d'origine galloise, à base de cheddar fondu (originellement, on utilisait du chester, maintenant, on utilise plus du cheddar Galloway).
+
+  Il est traditionnellement servi sur une tranche de pain grillé et passé au four. En France, le welsh est typiquement servi dans les brasseries du Nord et du Pas-de-Calais, où il est désormais bien ancré dans la culture régionale.",
+  photo: "https://assets.afcdn.com/recipe/20200113/106493_w1024h768c1cx640cy360cxt0cyt0cxb1280cyb720.png",
+  localisation: "70 Bd Sainte-Beuve, 62200 Boulogne-sur-Mer",
+  recipe: Recipe.first
+  )
+  meal.save

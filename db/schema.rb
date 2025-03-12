@@ -48,6 +48,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_12_120120) do
     t.bigint "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["recipe_id"], name: "index_meals_on_recipe_id"
   end
 
