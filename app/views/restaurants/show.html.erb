@@ -5,5 +5,14 @@
     <h5><%= @restaurant.address.capitalize %></h5>
     <a href="tel:<%=@restaurant.phone_number%>"><h5><%= @restaurant.phone_number%></h5></a>
     <p><%= @restaurant.description.capitalize %></p>
+    <div class="card-restaurant-mapbox">
+      <div style="width: 100%; height: 20vh; border-radius: 10px;"
+        data-controller="map"
+        data-map-markers-value="<%= [@markers.to_json] %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
 </div>
+
+<%= link_to "Retour",meals_path %>
