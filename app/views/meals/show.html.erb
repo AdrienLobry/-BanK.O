@@ -13,14 +13,18 @@
 
 <div>
   <h2>Restaurants proposant ce plat :</h2>
-  <ul>
+ <ul>
     <% @restaurants.each do |restaurant| %>
       <li>
         <strong><%= restaurant.name %></strong><br>
         <%= restaurant.address %><br>
         <%= restaurant.phone_number %><br>
-        <%= image_tag(restaurant.photo, alt: restaurant.name)%>
+        <a href="<%= restaurant_path(restaurant) %>">
+          <%= image_tag(restaurant.photo, alt: restaurant.name)%>
+        </a>
       </li>
     <% end %>
   </ul>
 </div>
+
+<%= link_to 'Retour à la liste des repas', meals_path %>
