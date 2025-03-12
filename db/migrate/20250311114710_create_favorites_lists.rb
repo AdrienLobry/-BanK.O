@@ -3,8 +3,8 @@ class CreateFavoritesLists < ActiveRecord::Migration[7.1]
     create_table :favorite_lists do |t|
       t.string :title
       t.string :localisation
-      t.references :meals, null: false, foreign_key: true
-      t.references :users, null: false, foreign_key: true
+      t.references :meal, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

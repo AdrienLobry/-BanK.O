@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  has_many :meals
+  has_one :meal
   has_many :proportions
-  has_many :ingredients, trough :proportions
+  has_many :ingredients, through: :proportions
 end
