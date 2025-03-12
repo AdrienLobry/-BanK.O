@@ -1,2 +1,12 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<h1><%= @recipe.name %></h1>
+
+
+<div>
+  <%= image_tag(@recipe.photo, alt: @recipe.name)%>
+</div>
+<div>
+  <p><strong>Recette:</strong> <%= @recipe.description %></p>
+</div>
+
+
+<%= link_to 'Retour à la liste des repas', meals_path %>

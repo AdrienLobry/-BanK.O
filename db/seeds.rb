@@ -57,6 +57,17 @@ end
 
   puts "#{Meal.count} Has been Created !"
 
+
+#pour tester les tables joins
+meal_restaurant = MealRestaurant.new(
+  meal: Meal.first,
+  restaurant: Restaurant.first
+)
+meal_restaurant.save
+
+puts"tables were joined"
+
+# pour tester la barre de recherche
 meal = Meal.new(
   name: "Le Bar En Croute",
   description: "Le welsh, aussi appelé welsh rabbit ou welsh rarebit1 ou parfois croque gallois2, est un plat d'origine galloise, à base de cheddar fondu (originellement, on utilisait du chester, maintenant, on utilise plus du cheddar Galloway).
