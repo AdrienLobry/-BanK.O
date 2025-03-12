@@ -5,18 +5,14 @@
     </div>
     <h2>Entrer votre code postal</h2>
     <div class="form-zipcode-home">
-      <div class="">
       <%= form_with url: meals_path, method: :get, class: "" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "input-form-home",
           placeholder: "Entrez le code Postal ou la Ville de destination"
         %>
-      </div>
-      <div class="">
-      <%= submit_tag "Localiser", name: "Localiser", class: "button-valid" %>
+        <%= submit_tag "Localiser", name: "Localiser", class: "button-valid" %>
       <% end %>
-      </div>
     </div>
   </div>
 </div>
