@@ -55,3 +55,12 @@ puts 'Cleaning Meal DB'
 end
 
   puts "#{Meal.count} Has been Created !"
+
+
+meal_restaurant = MealRestaurant.new(
+  meal: Meal.first,
+  restaurant: Restaurant.first
+)
+meal_restaurant.save
+
+puts"tables were joined"

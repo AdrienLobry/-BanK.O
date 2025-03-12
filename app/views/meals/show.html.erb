@@ -1,13 +1,26 @@
 <h1><%= @meal.name %></h1>
 
 <div>
+  <a href="<%= meal_recipe_path(@meal) %>">
+    <div>
+      <%= image_tag(@meal.photo, alt: @meal.name) if @meal.photo.present? %>
+    </div>
+  </a>
   <div>
-    <%= image_tag(@meal.photo, alt: @meal.name)%>
-  </div>
-  <div>
-    <p><strong>ID:</strong> <%= @meal.id %></p>
-    <!-- Ajoutez d'autres détails ici si nécessaire -->
+    <p><strong>Description:</strong> <%= @meal.description %></p>
   </div>
 </div>
 
-<%= link_to 'Retour à la liste', meals_path %>
+<div>
+  <h2>Restaurants proposant ce plat :</h2>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <strong><%= restaurant.name %></strong><br>
+        <%= restaurant.address %><br>
+        <%= restaurant.phone_number %><br>
+        <%= image_tag(restaurant.photo, alt: restaurant.name)%>
+      </li>
+    <% end %>
+  </ul>
+</div>

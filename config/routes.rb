@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :meals
   resources :restaurants, only: [:index]
   resources :recipes, only: [:show]
-  resources :meals, only: [:index, :show]
+  resources :meals, only: [:index, :show] do
+    get 'recipe', to: 'meals#show_recipe', as: 'recipe'
+  end
 end
