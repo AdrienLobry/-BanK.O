@@ -1,24 +1,22 @@
-
-
-<div class="container">
-  <div class="row col-sm-8 my-3">
-    <div class="col justify-center">
-      <div><%= image_tag('BanK-O Logo.png') %></div>
+<div class="container-home-page">
+  <div class=container-local>
+    <div class="logo-home">
+      <%= image_tag('BanK-O Logo.png') %>
     </div>
-  </div>
-
-  <div class="row col-sm-8 my-3">
-    <div class="col justify-center">
-      <%= form_with url: meals_path, method: :get, class: "d-flex" do %>
+    <h2>Entrer votre code postal</h2>
+    <div class="form-zipcode-home">
+      <div class="">
+      <%= form_with url: meals_path, method: :get, class: "" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "input-form-home",
           placeholder: "Entrez le code Postal ou la Ville de destination"
         %>
-      <%= submit_tag "Localiser", name: "Localiser", class: "btn btn-warning" %>
+      </div>
+      <div class="">
+      <%= submit_tag "Localiser", name: "Localiser", class: "button-valid" %>
       <% end %>
+      </div>
     </div>
   </div>
-
-
 </div>

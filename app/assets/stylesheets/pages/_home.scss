@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+.logo-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin-bottom: 10vh;
+
+  img {
+  width: 70vw;
+  max-width: 400px;
+  height: auto;}
+}
+
+h2 {
+  font-family: Bowlby One;
+  color: #582D1D;
+}
