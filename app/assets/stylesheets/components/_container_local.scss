@@ -12,6 +12,15 @@
   justify-content: center;
   text-align: center;
 }
+.container-card-meal {
+  width: 90vw;
+  justify-content: center;
+  text-align: center;
+}
+.meal-image {
+  object-fit: contain;
+  object-position: center;
+  max-width: 400px;
 
 .container-local-navbar {
   width: 90vw;
