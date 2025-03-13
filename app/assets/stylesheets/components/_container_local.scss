@@ -32,3 +32,40 @@
 .pages-index .container-local-navbar {
   justify-content: end;
 }
+
+.container-cards-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 20px;
+  width: 90vw;
+}
+
+.container-index-meals {
+  display: grid;
+  justify-content: center;
+}
+
+@media(max-width: 1200px) {
+  .container-cards-index {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 992px) {
+  .container-cards-index {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 850px) {
+  .container-cards-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 550px) {
+  .container-cards-index {
+    grid-template-columns: 1fr;
+  }
+}
