@@ -1,6 +1,9 @@
 .navbar-lewagon {
-  justify-content: space-between;
   background: #FFEFD6;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 10vh;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,27 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 80px;
+}
+
+.pages-index .navbar-brand {
+  display: none;
+}
+
+.pimp-drowdown-menu {
+  border-radius: 10px;
+  border: none;
+  font-family: Bowlby One;
+  background-color: #FFF6EA;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.10);
+  position: relative;
+  inset: 20px 0px auto auto !important;
+
+  a {
+    color: #582D1D;
+  }
+
+  a:hover {
+    color: white;
+    background-color: #582D1D;
+  }
 }
