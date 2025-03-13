@@ -12,3 +12,14 @@
   justify-content: center;
   text-align: center;
 }
+
+.container-local-navbar {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pages-index .container-local-navbar {
+  justify-content: end;
+}
