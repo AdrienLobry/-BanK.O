@@ -1,0 +1,16 @@
+<h1>Modifier mes Favoris</h1>
+
+<%= form_with model: @favorite_lists, url: favorites_path, method: :patch, local: true do |form| %>
+  <% @favorite_lists.each do |favorite_list| %>
+    <div>
+      <h2><%= favorite_list.title %></h2>
+      <p><strong>Localisation:</strong> <%= favorite_list.localisation %></p>
+      <p><strong>Plat:</strong> <%= favorite_list.meal.name %></p>
+      <!-- todo ajouter les options pour modifier/supprimer -->
+    </div>
+  <% end %>
+  <%= form.submit 'Mettre à jour les favoris' %>
+<% end %>
+
+
+<%# vestige %>

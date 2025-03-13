@@ -10,19 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_12_134339) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_13_132506) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "favorite_lists", force: :cascade do |t|
     t.string "title"
     t.string "localisation"
-    t.bigint "meal_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["meal_id"], name: "index_favorite_lists_on_meal_id"
     t.index ["user_id"], name: "index_favorite_lists_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "meal_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "favorite_list_id"
+    t.index ["favorite_list_id"], name: "index_favorites_on_favorite_list_id"
+    t.index ["meal_id"], name: "index_favorites_on_meal_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -109,8 +116,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_12_134339) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "favorite_lists", "meals"
   add_foreign_key "favorite_lists", "users"
+  add_foreign_key "favorites", "favorite_lists"
+  add_foreign_key "favorites", "meals"
   add_foreign_key "meal_restaurants", "meals"
   add_foreign_key "meal_restaurants", "restaurants"
   add_foreign_key "meals", "recipes"
