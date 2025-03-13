@@ -1,5 +1,55 @@
-{
+ {
     "recipe": [
+    {
+      "name": "Choucroute Garnie",
+      "description": "Ingrédients :\n- 1 kg de choucroute crue\n- 500 g de palette de porc\n- 4 saucisses de Strasbourg\n- 200 g de lard fumé\n- 4 pommes de terre\n- 1 oignon\n- 2 clous de girofle\n- 1 feuille de laurier\n- 10 cl de vin blanc d'Alsace\n- Sel, poivre\n\nÉtapes :\n1. Rincer la choucroute à l'eau froide et l'égoutter.\n2. Émincer l’oignon et le faire revenir avec le lard fumé dans une grande cocotte.\n3. Ajouter la choucroute, le vin blanc, le laurier et les clous de girofle. Mélanger.\n4. Déposer la palette de porc sur la choucroute, puis couvrir d'eau à hauteur. Laisser mijoter à feu doux pendant 1h30.\n5. Ajouter les saucisses et les pommes de terre coupées en morceaux, puis cuire encore 30 minutes.\n6. Servir chaud avec de la moutarde.",
+      "photo": "https://www.example.com/choucroute_garnie.jpg"
+    },
+    {
+      "name": "Tarte flambée",
+      "description": "Ingrédients :\n- 1 pâte à tarte fine\n- 200 g de crème fraîche épaisse\n- 1 oignon\n- 150 g de lardons fumés\n- 100 g de fromage râpé\n- Sel, poivre\n\nÉtapes :\n1. Préchauffer le four à 250°C.\n2. Étaler la pâte à tarte sur une plaque de cuisson recouverte de papier sulfurisé.\n3. Étaler la crème fraîche sur la pâte.\n4. Répartir les oignons émincés et les lardons sur la crème.\n5. Saupoudrer de fromage râpé.\n6. Enfourner pendant 10 à 12 minutes jusqu'à ce que la pâte soit dorée.",
+      "photo": "https://www.example.com/tarte_flambee.jpg"
+    },
+    {
+      "name": "Baeckeoffe",
+      "description": "Ingrédients :\n- 500 g de porc\n- 500 g de bœuf\n- 500 g d'agneau\n- 1 kg de pommes de terre\n- 2 oignons\n- 2 gousses d'ail\n- 1 carotte\n- 1 branche de thym\n- 1 feuille de laurier\n- 30 cl de vin blanc d'Alsace\n- Sel, poivre\n\nÉtapes :\n1. Couper la viande en morceaux et la faire mariner dans le vin blanc avec les oignons, l'ail, le thym et le laurier pendant 12 heures.\n2. Éplucher et couper les pommes de terre en rondelles.\n3. Disposer les pommes de terre, les légumes et la viande dans un grand faitout en alternant les couches.\n4. Verser la marinade sur les ingrédients et couvrir d'eau.\n5. Laisser mijoter à feu doux pendant 2 à 3 heures.",
+      "photo": "https://www.example.com/baeckeoffe.jpg"
+    },
+    {
+      "name": "Kougelhopf",
+      "description": "Ingrédients :\n- 500 g de farine\n- 200 g de sucre\n- 250 g de beurre\n- 1 sachet de levure de boulanger\n- 4 œufs\n- 200 g de raisins secs\n- 100 g d'amandes entières\n- 25 cl de lait\n- 1 pincée de sel\n\nÉtapes :\n1. Faire tiédir le lait et y dissoudre la levure.\n2. Mélanger la farine, le sucre et le sel, puis ajouter les œufs, le lait et le beurre fondu.\n3. Pétrir la pâte jusqu'à ce qu'elle soit homogène.\n4. Incorporer les raisins secs et les amandes.\n5. Laisser reposer la pâte pendant 2 heures.\n6. Préchauffer le four à 180°C et cuire le kougelhopf pendant 40 à 45 minutes.",
+      "photo": "https://www.example.com/kougelhopf.jpg"
+    },
+    {
+      "name": "Flammekueche sucrée",
+      "description": "Ingrédients :\n- 1 pâte à tarte fine\n- 200 g de crème fraîche épaisse\n- 4 pommes\n- 50 g de sucre\n- 1 cuil. à café de cannelle\n\nÉtapes :\n1. Préchauffer le four à 250°C.\n2. Étaler la pâte à tarte sur une plaque de cuisson.\n3. Étaler la crème fraîche sur la pâte.\n4. Peler et couper les pommes en fines tranches, puis les disposer sur la crème.\n5. Saupoudrer de sucre et de cannelle.\n6. Enfourner pendant 10 à 12 minutes jusqu'à ce que la pâte soit dorée.",
+      "photo": "https://www.example.com/flammekueche_sucree.jpg"
+    },
+    {
+      "name": "Munster",
+      "description": "Ingrédients :\n- 1 fromage Munster\n- 1 pain de seigle\n- 1 petite poignée de cumin\n\nÉtapes :\n1. Couper le Munster en tranches épaisses.\n2. Faire griller les tranches de pain de seigle.\n3. Disposer les tranches de fromage sur le pain grillé et saupoudrer de cumin.\n4. Servir en entrée ou en snack.",
+      "photo": "https://www.example.com/munster.jpg"
+    },
+    {
+      "name": "Potée alsacienne",
+      "description": "Ingrédients :\n- 1,5 kg de viande de porc (lard, jarret, saucisses)\n- 1 chou vert\n- 4 pommes de terre\n- 2 carottes\n- 2 oignons\n- 1 branche de thym\n- 1 feuille de laurier\n- Sel, poivre\n\nÉtapes :\n1. Faire blanchir la viande dans de l'eau bouillante, puis égoutter.\n2. Couper les légumes en morceaux.\n3. Dans une grande cocotte, disposer la viande et les légumes en couches.\n4. Ajouter le thym, le laurier, le sel et le poivre.\n5. Couvrir d'eau et laisser mijoter pendant 2 à 3 heures.",
+      "photo": "https://www.example.com/potee_alsacienne.jpg"
+    },
+    {
+      "name": "Schwowebretzel",
+      "description": "Ingrédients :\n- 500 g de farine\n- 300 ml d'eau\n- 1 sachet de levure\n- 1 cuil. à café de sel\n- 1 cuil. à soupe de sucre\n- 2 cuil. à soupe de bicarbonate\n- Gros sel\n\nÉtapes :\n1. Mélanger la farine, la levure, l'eau, le sel et le sucre pour former une pâte.\n2. Laisser reposer la pâte pendant 1 heure.\n3. Diviser la pâte en petites boules et les rouler en boudins.\n4. Former des bretzels et les plonger dans une solution de bicarbonate dissous dans de l'eau chaude.\n5. Saupoudrer de gros sel et cuire à 220°C pendant 15 à 20 minutes.",
+      "photo": "https://www.example.com/schwowebretzel.jpg"
+    },
+    {
+      "name": "Chocolat de Noël",
+      "description": "Ingrédients :\n- 200 g de chocolat noir\n- 50 g de noisettes concassées\n- 1 cuil. à soupe d'épices à pain d'épices\n\nÉtapes :\n1. Faire fondre le chocolat au bain-marie.\n2. Ajouter les noisettes et les épices au chocolat fondu.\n3. Verser le mélange dans des moules à chocolat et laisser durcir au réfrigérateur pendant 2 heures.",
+      "photo": "https://www.example.com/chocolat_noel.jpg"
+    },
+    {
+      "name": "Tarte au fromage blanc",
+      "description": "Ingrédients :\n- 1 pâte sablée\n- 500 g de fromage blanc\n- 100 g de sucre\n- 2 œufs\n- 1 cuil. à café de vanille\n\nÉtapes :\n1. Préchauffer le four à 180°C.\n2. Étaler la pâte sablée dans un moule à tarte.\n3. Mélanger le fromage blanc, le sucre, les œufs et la vanille.\n4. Verser la préparation sur la pâte.\n5. Cuire pendant 30 à 35 minutes jusqu'à ce que la tarte soit dorée.",
+      "photo": "https://www.example.com/tarte_fromage_blanc.jpg"
+      },
     {
         "name": "Tarte au Maroilles",
         "description": "Une délicieuse tarte au Maroilles, spécialité du Nord, avec une pâte croustillante et un goût de fromage puissant.\n\n### Ingrédients :\n- 1 pâte brisée\n- 200 g de Maroilles\n- 20 cl de crème fraîche épaisse\n- 2 œufs\n- Poivre\n\n### Préparation :\n1. Préchauffez le four à 200°C.\n2. Étalez la pâte dans un moule à tarte et piquez le fond avec une fourchette.\n3. Coupez le Maroilles en tranches et répartissez-les sur la pâte.\n4. Mélangez la crème fraîche, les œufs et le poivre, puis versez sur le fromage.\n5. Enfournez 25 minutes jusqu'à ce que la tarte soit dorée.\n6. Servez chaud avec une salade verte.",
@@ -72,6 +122,66 @@
     }
     ],
     "meal": [
+      {
+        "name": "Choucroute Garnie",
+        "description": "La choucroute garnie est un plat traditionnel alsacien composé de chou fermenté, de viande, et de saucisses, généralement accompagné de pommes de terre. C'est un plat riche en saveurs et en histoire, parfait pour les repas conviviaux.",
+        "photo": "https://example.com/choucroute_garnie.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Tarte flambée",
+        "description": "La tarte flambée, ou flammekueche, est une spécialité alsacienne composée d'une pâte fine recouverte de crème fraîche, d'oignons et de lardons. C'est une sorte de pizza traditionnelle souvent partagée en famille ou entre amis.",
+        "photo": "https://example.com/tarte_flambée.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Baeckeoffe",
+        "description": "Le Baeckeoffe est un ragoût alsacien à base de viandes marinées, de pommes de terre, de légumes et d'herbes, cuit lentement dans un four en terre. Ce plat savoureux est un véritable symbole de la cuisine alsacienne.",
+        "photo": "https://example.com/baeckeoffe.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Kougelhopf",
+        "description": "Le Kougelhopf est un gâteau alsacien en forme de couronne, souvent préparé avec des raisins secs, des noix et parfois un peu d'alcool. Il est souvent servi lors des fêtes et des occasions spéciales.",
+        "photo": "https://example.com/kougelhopf.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Flammekueche sucrée",
+        "description": "La flammekueche sucrée est une variation de la tarte flambée, garnie de fruits frais ou de crème sucrée. C'est un dessert gourmand qui ravit les amateurs de sucré.",
+        "photo": "https://example.com/flammekueche_sucrée.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Munster",
+        "description": "Le Munster est un fromage crémeux et parfumé, fabriqué dans la région du même nom. Il est souvent dégusté avec du pain de campagne ou des pommes de terre.",
+        "photo": "https://example.com/munster.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Potée alsacienne",
+        "description": "La potée alsacienne est un plat consistant à base de choucroute, de viande, de saucisses et de légumes. Il est souvent préparé dans une grande marmite et cuit lentement pour libérer toutes les saveurs.",
+        "photo": "https://example.com/potée_alsacienne.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Schwowebretzel",
+        "description": "Les Schwowebretzel sont des bretzels alsaciens, souvent plus grands et plus dorés que ceux d'autres régions. Ils sont croustillants à l'extérieur et moelleux à l'intérieur, parfaits pour accompagner une bière.",
+        "photo": "https://example.com/schwowebretzel.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Chocolat de Noël",
+        "description": "Le chocolat de Noël alsacien est une tradition pendant les fêtes de fin d'année. Il peut être sous forme de tablettes, de bonbons ou de figurines, souvent aromatisé avec des épices comme la cannelle et l'orange.",
+        "photo": "https://example.com/chocolat_de_noel.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
+      {
+        "name": "Tarte au fromage blanc",
+        "description": "La tarte au fromage blanc est une pâtisserie légère et crémeuse, faite à base de fromage blanc, d'œufs et de sucre. C'est un dessert populaire dans la région, souvent servi avec des fruits frais.",
+        "photo": "https://example.com/tarte_fromage_blanc.jpg",
+        "localisation": "1 Place Kleber, 67000 Strasbourg, France"
+      },
       {
         "name": "Tarte au Maroilles",
         "description": "Une tarte savoureuse à base de Maroilles, fromage emblématique du Nord.",
@@ -158,6 +268,126 @@
       }
     ],
     "restaurant":[
+      {
+        "name": "Le Clou",
+        "phone_number": "+33 3 88 32 11 67",
+        "photo": "https://example.com/le-clou.jpg",
+        "address": "3 Rue du Chaudron, 67000 Strasbourg, France",
+        "description": "Un restaurant traditionnel alsacien offrant une ambiance chaleureuse et des plats comme la Choucroute Garnie et la Tarte Flambée.",
+        "menu": ["Choucroute Garnie", "Tarte Flambée"]
+    },
+    {
+        "name": "La Corde à Linge",
+        "phone_number": "+33 3 88 22 13 33",
+        "photo": "https://example.com/la-corde-a-linge.jpg",
+        "address": "2 Place des Tripiers, 67000 Strasbourg, France",
+        "description": "Ce restaurant propose une variété de plats alsaciens, y compris le Baeckeoffe et la Flammekueche sucrée, dans un cadre moderne et convivial.",
+        "menu": ["Baeckeoffe", "Flammekueche sucrée"]
+    },
+    {
+        "name": "Au Pont du Corbeau",
+        "phone_number": "+33 3 88 35 60 68",
+        "photo": "https://example.com/au-pont-du-corbeau.jpg",
+        "address": "21 Quai Saint-Nicolas, 67000 Strasbourg, France",
+        "description": "Un restaurant historique servant des spécialités alsaciennes comme la Choucroute Garnie et le Munster.",
+        "menu": ["Choucroute Garnie", "Munster"]
+    },
+    {
+        "name": "Le Gruber",
+        "phone_number": "+33 3 88 32 13 12",
+        "photo": "https://example.com/le-gruber.jpg",
+        "address": "5 Rue de la Haute Montée, 67000 Strasbourg, France",
+        "description": "Un lieu convivial proposant des plats alsaciens traditionnels, dont la Tarte Flambée et le Kougelhopf.",
+        "menu": ["Tarte Flambée", "Kougelhopf"]
+    },
+    {
+        "name": "Maison Kammerzell",
+        "phone_number": "+33 3 88 32 42 14",
+        "photo": "https://example.com/maison-kammerzell.jpg",
+        "address": "16 Place de la Cathédrale, 67000 Strasbourg, France",
+        "description": "Un restaurant emblématique de Strasbourg, célèbre pour sa Potée Alsacienne et son ambiance médiévale.",
+        "menu": ["Potée Alsacienne"]
+    },
+    {
+        "name": "Le Tire-Bouchon",
+        "phone_number": "+33 3 88 23 03 09",
+        "photo": "https://example.com/le-tire-bouchon.jpg",
+        "address": "5 Rue des Tailleurs de Pierre, 67000 Strasbourg, France",
+        "description": "Un petit restaurant cosy spécialisé dans les plats alsaciens, notamment la Flammekueche sucrée et le Schwowebretzel.",
+        "menu": ["Flammekueche sucrée", "Schwowebretzel"]
+    },
+    {
+        "name": "Le Gavroche",
+        "phone_number": "+33 3 88 32 17 88",
+        "photo": "https://example.com/le-gavroche.jpg",
+        "address": "4 Rue Klein, 67000 Strasbourg, France",
+        "description": "Un restaurant raffiné proposant des plats alsaciens revisités, comme la Tarte au Fromage Blanc et le Chocolat de Noël.",
+        "menu": ["Tarte au Fromage Blanc", "Chocolat de Noël"]
+    },
+    {
+        "name": "Le Binchstub",
+        "phone_number": "+33 3 88 23 04 52",
+        "photo": "https://example.com/le-binchstub.jpg",
+        "address": "8 Rue des Dentelles, 67000 Strasbourg, France",
+        "description": "Un restaurant typique alsacien servant des plats comme la Choucroute Garnie et la Tarte Flambée.",
+        "menu": ["Choucroute Garnie", "Tarte Flambée"]
+    },
+    {
+        "name": "Le Strasbourgeois",
+        "phone_number": "+33 3 88 32 14 73",
+        "photo": "https://example.com/le-strasbourgeois.jpg",
+        "address": "13 Rue des Frères, 67000 Strasbourg, France",
+        "description": "Un restaurant familial proposant des plats alsaciens traditionnels, dont le Baeckeoffe et la Potée Alsacienne.",
+        "menu": ["Baeckeoffe", "Potée Alsacienne"]
+    },
+    {
+        "name": "Le Petit Bois Vert",
+        "phone_number": "+33 3 88 32 19 39",
+        "photo": "https://example.com/le-petit-bois-vert.jpg",
+        "address": "7 Rue des Tonneliers, 67000 Strasbourg, France",
+        "description": "Un restaurant chaleureux spécialisé dans les plats alsaciens, comme la Tarte Flambée et le Munster.",
+        "menu": ["Tarte Flambée", "Munster"]
+    },
+    {
+        "name": "Le Jardin des Délices",
+        "phone_number": "+33 3 88 23 04 12",
+        "photo": "https://example.com/le-jardin-des-delices.jpg",
+        "address": "10 Rue des Bouchers, 67000 Strasbourg, France",
+        "description": "Un restaurant élégant proposant des plats alsaciens raffinés, dont la Flammekueche sucrée et le Kougelhopf.",
+        "menu": ["Flammekueche sucrée", "Kougelhopf"]
+    },
+    {
+        "name": "Le Caveau des Gourmets",
+        "phone_number": "+33 3 88 32 12 34",
+        "photo": "https://example.com/le-caveau-des-gourmets.jpg",
+        "address": "15 Rue des Tonneliers, 67000 Strasbourg, France",
+        "description": "Un restaurant traditionnel alsacien proposant des plats comme la Choucroute Garnie et le Schwowebretzel.",
+        "menu": ["Choucroute Garnie", "Schwowebretzel"]
+    },
+    {
+        "name": "Le Gourmet Alsacien",
+        "phone_number": "+33 3 88 23 05 67",
+        "photo": "https://example.com/le-gourmet-alsacien.jpg",
+        "address": "9 Rue des Moulins, 67000 Strasbourg, France",
+        "description": "Un restaurant spécialisé dans les plats alsaciens, notamment la Tarte au Fromage Blanc et le Chocolat de Noël.",
+        "menu": ["Tarte au Fromage Blanc", "Chocolat de Noël"]
+    },
+    {
+        "name": "Le Vieux Strasbourg",
+        "phone_number": "+33 3 88 32 14 56",
+        "photo": "https://example.com/le-vieux-strasbourg.jpg",
+        "address": "12 Rue du Vieux-Marché, 67000 Strasbourg, France",
+        "description": "Un restaurant historique proposant des plats alsaciens traditionnels, comme la Potée Alsacienne et le Baeckeoffe.",
+        "menu": ["Potée Alsacienne", "Baeckeoffe"]
+    },
+    {
+        "name": "Le Comptoir Alsacien",
+        "phone_number": "+33 3 88 23 06 78",
+        "photo": "https://example.com/le-comptoir-alsacien.jpg",
+        "address": "6 Rue des Charpentiers, 67000 Strasbourg, France",
+        "description": "Un restaurant moderne proposant des plats alsaciens revisités, dont la Tarte Flambée et la Flammekueche sucrée.",
+        "menu": ["Tarte Flambée", "Flammekueche sucrée"]
+    },
     {
       "name": "La Ch'tite Brigitte",
       "phone_number": "+33 3 20 15 30 30",
