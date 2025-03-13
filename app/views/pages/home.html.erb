@@ -14,5 +14,9 @@
         <%= submit_tag "Localiser", name: "Localiser", class: "button-valid" %>
       <% end %>
     </div>
+        <!-- temporaire : bouton vers favoris -->
+    <% if user_signed_in? %>
+      <%= link_to 'Voir mes Favoris', favorite_lists_path, class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div>
