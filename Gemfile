@@ -56,6 +56,7 @@ gem "devise" # gem User
 
 gem "geocoder" # gem pour Geocoder / SearchBar
 
+gem "faker" # pour seed restaurant
 
 
 
