@@ -25,6 +25,8 @@
                     <%= form.hidden_field :meal_id, value: meal.id %>
                     <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
                     <%= form.submit 'Ajouter', class: 'btn btn-primary mt-2' %>
+                    <!-- ajouter une liste depuis la modale -->
+                    <%= link_to 'Nouvelle liste', new_favorite_list_path, class: 'btn btn-secondary mt-2' %>
                   <% end %>
                 </div>
               </div>

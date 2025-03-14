@@ -16,13 +16,13 @@ class FavoritesController < ApplicationController
       if params[:action] == "show"
         redirect_to meal_path(@meal), notice: 'Plat ajouté à la liste de favoris avec succès.'
       else
-        redirect_to meals_path, notice: 'Plat ajouté à la liste de favoris avec succès.'
+        redirect_to meals_path(query: @favorite_list.localisation, Localiser: "Localiser"), notice: 'Plat ajouté à la liste de favoris avec succès.'
       end
     else
       if params[:action] == "show"
         redirect_to meal_path(@meal), alert: 'Erreur lors de l\'ajout du plat à la liste de favoris, veuillez vous plaindre (poliment) à Paul.'
       else
-        redirect_to meals_path, alert: 'Erreur lors de l\'ajout du plat à la liste de favoris, veuillez vous plaindre (poliment) à Paul.'
+        redirect_to meals_path(query: @favorite_list.localisation, Localiser: "Localiser"), alert: 'Erreur lors de l\'ajout du plat à la liste de favoris, veuillez vous plaindre (poliment) à Paul.'
       end
     end
   end
