@@ -10,16 +10,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :meals do
-    get 'recipe', to: 'meals#show_recipe', as: 'recipe'
+    get 'recipe', to: 'meals#show_recipe'
   end
 
   resources :favorite_lists do
     resources :favorites, only: [:destroy]
   end
 
-  post 'meals/:id/add_to_favorite', to: 'meals#add_meal_to_favorite', as: 'add_meal_to_favorite'
+  post 'meals/:id/favorite', to: 'favorites#create', as: 'favorite'
 
   resources :restaurants, only: [:show]
   resources :recipes, only: [:show]
-
 end

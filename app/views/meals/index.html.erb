@@ -2,12 +2,36 @@
   <h2 class="title-meals">Les spécialités du coin:</h2>
   <div class="container-cards-index">
     <% @meals.each do |meal| %>
-    <div class="position-button-fav-card">
-      <%= link_to meal_path(meal), class:"card-meal-index card-bg-image", style:"background-image: url(#{meal.photo})" do %>
-        <h2 class="title-meal-card"><%= meal.name %></h2>
-          <%= link_to "+", root_path, class:"button-fav" %>
-      <% end %>
-    </div>
+      <div class="position-button-fav-card">
+        <%= link_to meal_path(meal), class:"card-meal-index card-bg-image", style:"background-image: url(#{meal.photo})" do %>
+          <h2 class="title-meal-card"><%= meal.name %></h2>
+        <% end %>
+
+        <!-- modification du bouton de vic pour ouvrir la modale -->
+        <% if user_signed_in? %>
+          <button type="button" class="btn btn-primary button-fav" data-bs-toggle="modal" data-bs-target="#addToFavoriteModal_<%= meal.id %>">
+            +
+          </button>
+                  <!-- code de la modale pas du tout piqué sur git -->
+          <div class="modal fade" id="addToFavoriteModal_<%= meal.id %>" tabindex="-1" aria-labelledby="addToFavoriteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addToFavoriteModalLabel">Ajouter à une liste de favoris</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <%= form_with url: favorite_path(meal), method: :post do |form| %>
+                    <%= form.hidden_field :meal_id, value: meal.id %>
+                    <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
+                    <%= form.submit 'Ajouter', class: 'btn btn-primary mt-2' %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
