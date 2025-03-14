@@ -13,9 +13,9 @@ class FavoriteListsController < ApplicationController
   def create
     @favorite_list = current_user.favorite_lists.build(favorite_list_params)
     if @favorite_list.save
-      redirect_to favorite_lists_path, notice: 'Nouvelle liste de favoris créée avec succès.'
+      redirect_to meals_path(query: @favorite_list.localisation, Localiser: "Localiser"), notice: 'Nouvelle liste de favoris créée avec succès.'
     else
-      render :new
+      redirect_to favorite_lists_path, notice: 'erreur.'
     end
   end
 
