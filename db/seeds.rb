@@ -1,4 +1,6 @@
 # Clear existing data
+# Destroy dependent records first
+Favorite.destroy_all
 MealRestaurant.destroy_all
 Meal.destroy_all
 Recipe.destroy_all
