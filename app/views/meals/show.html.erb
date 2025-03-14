@@ -46,7 +46,7 @@
   <div class="container-local">
     <div class="meals-fav-list">
       <% if user_signed_in? %>
-        <%= form_with url: add_meal_to_favorite_path(@meal), class: "meals-form-fav-list",method: :post, local: true do |form| %>
+        <%= form_with url: favorite_path(@meal), class: "meals-form-fav-list",method: :post, local: true do |form| %>
           <%= form.hidden_field :meal_id, value: @meal.id %>
           <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
           <div class="button-form-fav">
