@@ -1,11 +1,18 @@
-<h1><%= @recipe.name %></h1>
 
-<div>
-  <%= image_tag(@recipe.photo, alt: @recipe.name) %>
-</div>
-<div>
-  <p><strong>Recette:</strong> <%= @recipe.description.html_safe %></p>
-</div>
+<div class="container-recipe-index">
+  <div class="container-local">
+    <div class="card-recipe-show">
+      <h2 class="title-meals"><%= @recipe.name %></h2>
 
-<%= link_to 'Retour à la selection des restaurants', meal_path(@meal) %>
-<%= link_to 'Retour à la liste des repas', meals_path %>
+      <div class="card-recipe-index">
+        <%= image_tag(@recipe.photo, alt: @recipe.name)  %>
+      </div>
+
+      <div class="recipe-description-show">
+        <p><strong>Recette:</strong> <%= @recipe.description.html_safe %></p>
+      </div>
+        <%= link_to 'Retour à la selection des restaurants', meal_path(@meal) %>
+        <%= link_to 'Retour à la liste des repas', meals_path %>
+    </div>
+  </div>
+</div>

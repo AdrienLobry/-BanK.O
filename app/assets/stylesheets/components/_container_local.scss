@@ -70,3 +70,37 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.card-recipe-show {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-recipe-index {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
+
+.container-recipe-index {
+  display: flex;
+  justify-content: center;
+
+}
+
+.recipe-description-show {
+  justify-content: center;
+  text-align: left;
+}
