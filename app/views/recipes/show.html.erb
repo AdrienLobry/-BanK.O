@@ -12,7 +12,7 @@
         <p><strong>Recette:</strong> <%= @recipe.description.html_safe %></p>
       </div>
         <%= link_to 'Retour à la selection des restaurants', meal_path(@meal) %>
-        <%= link_to 'Retour à la liste des repas', meals_path %>
+        <%= link_to 'Retour à la selection des plats', meals_path(query: @meal.localisation, Localiser: "Localiser"), class:"button-back" %>
     </div>
   </div>
 </div>
