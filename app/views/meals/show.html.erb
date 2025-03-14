@@ -1,39 +1,69 @@
-<h1><%= @meal.name %></h1>
-
-<div>
-  <a href="<%= meal_recipe_path(@meal) %>">
-    <div>
-      <%= image_tag(@meal.photo, alt: @meal.name) if @meal.photo.present? %>
+<div class="meals-show">
+  <div class="container-local">
+    <div class="meals-info">
+      <div class="meals-info-image">
+        <a href="<%= meal_recipe_path(@meal) %>">
+          <%= image_tag(@meal.photo, alt: @meal.name) if @meal.photo.present? %>
+        </a>
+      </div>
+      <div class="meals-info-body">
+        <a href="<%= meal_recipe_path(@meal) %>"><h1><%= @meal.name %></h1></a>
+        <p><strong>Description:</strong> <%= @meal.description %></p>
+      </div>
     </div>
-  </a>
-  <div>
-    <p><strong>Description:</strong> <%= @meal.description %></p>
   </div>
 </div>
 
-<div>
-  <h2>Restaurants proposant ce plat :</h2>
- <ul>
-    <% @restaurants.each do |restaurant| %>
-      <li>
-        <strong><%= restaurant.name %></strong><br>
-        <%= restaurant.address %><br>
-        <%= restaurant.phone_number %><br>
-        <a href="<%= restaurant_path(restaurant) %>">
-          <%= image_tag(restaurant.photo, alt: restaurant.name)%>
-        </a>
-      </li>
-    <% end %>
-  </ul>
+<div class="meals-show">
+  <div class="container-local">
+    <div class="meals-restaurants-info">
+      <h2>Restaurants proposant ce plat :</h2>
+      <ul>
+        <% @restaurants.each do |restaurant| %>
+          <li>
+            <div class="card-meal-restaurant">
+              <div class="card-meal-restaurant-info">
+                <h3><%= restaurant.name %></h3>
+              </div>
+              <div class="card-meal-restaurant-img">
+                <a href="<%= restaurant_path(restaurant) %>">
+                  <%= image_tag(restaurant.photo, alt: restaurant.name)%>
+                </a>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<%= link_to 'Retour à la liste des repas', meals_path %>
+
+
 
 <!-- Bouton pour ajouter le plat à une liste de favoris -->
-<% if user_signed_in? %>
-  <%= form_with url: add_meal_to_favorite_path(@meal), method: :post, local: true do |form| %>
-    <%= form.hidden_field :meal_id, value: @meal.id %>
-    <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
-    <%= form.submit 'Ajouter à la liste de favoris' %>
-  <% end %>
-<% end %>
+<div class="meals-show">
+  <div class="container-local">
+    <div class="meals-fav-list">
+      <% if user_signed_in? %>
+        <%= form_with url: add_meal_to_favorite_path(@meal), class: "meals-form-fav-list",method: :post, local: true do |form| %>
+          <%= form.hidden_field :meal_id, value: @meal.id %>
+          <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
+          <div class="button-form-fav">
+            <%= form.submit 'Ajouter', class:"meals-button-form-fav-list" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="meals-show">
+  <div class="container-local">
+    <div class="meals-button-back">
+      <%= link_to 'Retour', meals_path, class:"button-back" %>
+    </div>
+  </div>
+</div>

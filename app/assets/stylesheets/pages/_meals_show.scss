@@ -1,0 +1,136 @@
+.meals-info {
+
+  img {
+    width: 100vw;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  a {
+    color: #582D1D;
+  }
+
+  h1 {
+    font-family: Bowlby One;
+    margin: 10px 0px;
+  }
+
+  p {
+    font-family: Open Sans;
+  }
+}
+
+.meals-show {
+  display: flex;
+  justify-content: center;
+
+  .meals-info-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.meals-restaurants-info {
+  img {
+    width: 100vw;
+  }
+
+  ul {
+    display: grid;
+    gap: 10px;
+    padding: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+@media(max-width: 1200px) {
+
+}
+
+@media(max-width: 992px) {
+  .meals-restaurants-info {
+    ul {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .card-meal-restaurant {
+    height: 12vh;
+  }
+}
+
+@media(max-width: 950px) {
+  .meals-restaurants-info {
+    ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .card-meal-restaurant {
+    height: 11vh;
+  }
+}
+
+@media(max-width: 650px) {
+  .meals-restaurants-info {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card-meal-restaurant {
+    height: 10vh;
+  }
+}
+
+.meals-fav-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.meals-form-fav-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  background-color: #a372607a;
+  padding: 15px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+  #favorite_list_id {
+    border: none;
+    padding: 5px 5px;
+    background-color: #FFF6EA;
+    border-radius: 50px;
+    font-family: Open Sans;
+    color: #582D1D
+  }
+
+  .meals-button-form-fav-list {
+    background-color: #FFEFD6;
+    border: none;
+    width: 40%;
+    font-family: Open Sans;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    color: black;
+  }
+
+  .button-form-fav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.meals-button-back {
+  display: flex;
+  justify-content: center;
+}
