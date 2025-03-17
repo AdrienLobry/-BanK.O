@@ -2,6 +2,30 @@
   <div class="card-restaurant-show">
     <%= image_tag "#{@restaurant.photo}", alt: "Photo" %>
     <h2><%= @restaurant.name.capitalize %></h2>
+    <div class="rating">
+      <%# Permet d'afficher le bon nombre d'étoile pour le rating %>
+      <%# Si la note est un entier %>
+      <% if @rating.to_f % 1 == 0 %>
+        <% @rating.to_i.times do %>
+          <i class="fa-solid fa-star rating-stars"></i>
+        <% end %>
+        <% (5-@rating.to_i).times do %>
+          <i class="fa-regular fa-star rating-stars"></i>
+        <% end %>
+        <%= @rating.to_f %>
+      <%# Si la note est un float %>
+      <% else %>
+        <% @rating.to_f.floor.times do %>
+          <i class="fa-solid fa-star rating-stars"></i>
+        <% end %>
+        <i class="fa-solid fa-star-half-stroke rating-stars"></i>
+        <% (4-@rating.to_i.floor).times do %>
+          <i class="fa-regular fa-star rating-stars"></i>
+        <% end %>
+        <%= @rating.to_f %>
+      <% end %>
+    </div>
+    <p><%= @address %></p>
     <h5><%= @restaurant.address.capitalize %></h5>
     <a href="tel:<%=@restaurant.phone_number%>"><h5><%= @restaurant.phone_number%></h5></a>
     <p><%= @restaurant.description.capitalize %></p>
