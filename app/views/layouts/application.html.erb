@@ -15,11 +15,13 @@
   </head>
 
   <body class="<%= controller_name %>-index">
-
-  <%= render "shared/navbar" %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="navbar-local">
+    <%= render "shared/navbar" %>
+  </div>
+  <div class="content-body">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+  </div>
   </body>
 </html>
- 
