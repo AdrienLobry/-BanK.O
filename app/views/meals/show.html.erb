@@ -50,7 +50,9 @@
           <%= form.hidden_field :meal_id, value: @meal.id %>
           <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
           <div class="button-form-fav">
-            <%= form.submit 'Ajouter', class:"meals-button-form-fav-list" %>
+              <%= form.submit 'Ajouter', class:"meals-button-form-fav-list" %>
+              <%= link_to 'Créer', new_favorite_list_path, class: "meals-button-form-fav-list" %>
+            </div>
           </div>
         <% end %>
       <% end %>
