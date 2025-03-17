@@ -42,6 +42,12 @@
   width: 90vw;
 }
 
+.container-favorites-index { // modif
+  position: relative;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
 .container-index-meals {
   display: grid;
   justify-content: center;
