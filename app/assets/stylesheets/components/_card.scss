@@ -41,6 +41,23 @@
   }
 }
 
+.card-favorite-list-collapsed {
+  background-color: #E9BA79;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+
+  .card-favorite-list {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .card-meal-index {
   height: 22vh;
   display: flex;
@@ -49,6 +66,21 @@
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+  h2 {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-family: Bowlby One;
+  }
+}
+
+.card-meal-favorite {
+  height: 22vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1vw;
   h2 {
     color: white;
     text-shadow: 1px 1px 1px black;
