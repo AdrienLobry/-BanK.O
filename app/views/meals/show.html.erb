@@ -3,7 +3,8 @@
     <div class="meals-info">
       <div class="meals-info-image">
         <a href="<%= meal_recipe_path(@meal) %>">
-          <%= image_tag(@meal.photo, alt: @meal.name) if @meal.photo.present? %>
+          <%= image_tag(@meal.photo, alt: @meal.name, class:"image-position") if @meal.photo.present? %>
+        <i class="fa-solid fa-kitchen-set fa-3x button-recipe"></i>
         </a>
       </div>
       <div class="meals-info-body">
