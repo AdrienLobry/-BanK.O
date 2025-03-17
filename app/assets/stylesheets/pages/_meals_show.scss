@@ -113,6 +113,20 @@
   margin-bottom: 10px;
 }
 
+.recipe-button-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  .button-back {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: large;
+    height: 5vh;
+  }
+}
+
+
 .meals-form-fav-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -154,4 +168,10 @@
 .meals-button-back {
   display: flex;
   justify-content: center;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
