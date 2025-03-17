@@ -16,5 +16,20 @@
 
 body {
   background-color: #FFEFD6;
+  margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.navbar-local {
+  background-color: #FFEFD6;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index: 20;
+}
+
+.content-body {
+  margin-top: 14vh;
 }
