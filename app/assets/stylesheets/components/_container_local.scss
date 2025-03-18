@@ -110,3 +110,22 @@
   justify-content: center;
   text-align: left;
 }
+
+.custom-marker {
+  position: relative;
+  width: 80px;   /* Marker size */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Marker image */
+.marker-image {
+  width: 40px;   /* Adjust for better centering */
+  height: 40px;
+  background-image: url('/assets/pin_mapbox2.png'); /* Path to your marker image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
