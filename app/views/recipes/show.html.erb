@@ -8,7 +8,7 @@
         <%= image_tag(@recipe.photo, alt: @recipe.name)  %>
       </div>
       <div class="recipe-description-show">
-        <p><strong>Recette:</strong></p>
+        <h2 style="text-align: center">Recette</h2>
         <p> <%= @recipe.description.html_safe %></p>
       </div>
       <div class="recipe-button-card" >
