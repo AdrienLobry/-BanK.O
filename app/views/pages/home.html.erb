@@ -4,15 +4,21 @@
       <%= image_tag('BanK-O Logo.png') %>
     </div>
     <h2>Entrer votre code postal</h2>
-    <div class="form-zipcode-home">
-      <%= form_with url: meals_path, method: :get, class: "" do %>
+    <div class="form-zipcode-home" data-controller="geolocation">
+      <%= form_with url: meals_path, method: :get, class: "input-position" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "input-form-home",
-          placeholder: "Entrez le code Postal ou la Ville de destination"
+          data: { geolocation_target: "inputCity" },
+          placeholder: "Entrez le code Postal ou la Ville"
         %>
+        <a href="#" class="pin_location" data-action="click->geolocation#getLocation"><%= image_tag "pin_mapbox_location.png"%></a>
         <%= submit_tag "Localiser", name: "Localiser", class: "button-valid" %>
       <% end %>
     </div>
   </div>
 </div>
+
+<script>
+  window.MAPBOX_ACCESS_TOKEN = "<%= ENV['MAPBOX_API_KEY'] %>";
+</script>

@@ -16,3 +16,14 @@ h2 {
   font-family: Bowlby One;
   color: #582D1D;
 }
+
+.pin_location {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+
+  img {
+    width: auto;
+    height: 4vh;
+  }
+}
