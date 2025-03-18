@@ -58,6 +58,8 @@ gem "geocoder" # gem pour Geocoder / SearchBar
 
 gem "faker" # pour seed restaurant
 
+# Gem Victor
+gem 'gon'
 
 
 
