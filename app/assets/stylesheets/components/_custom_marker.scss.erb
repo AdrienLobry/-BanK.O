@@ -1,0 +1,19 @@
+
+.custom-marker {
+  position: relative;
+  width: 80px;   /* Marker size */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Marker image */
+.marker-image {
+  width: 40px;
+  height: 40px;
+  background-image: url('<%= asset_path("pin_mapbox.png") %>'); /* Rails asset pipeline */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
