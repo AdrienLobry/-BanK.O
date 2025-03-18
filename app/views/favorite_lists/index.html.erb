@@ -7,7 +7,11 @@
       <div class="card-favorite-list-collapsed" data-favorite-list-toggle-target="favoriteList" data-action="click->favorite-list-toggle#toggleCard">
         <div class="card-favorite-list">
           <div class="d-flex justify-content-between align-items-center">
-            <h5 class="card-title"><%= favorite_list.title %></h5>
+            <% if favorite_list.favorites.any? %>
+              <% random_favorite = favorite_list.favorites.sample %>
+              <%= image_tag random_favorite.meal.photo, class: 'random-favorite-image' %>
+            <% end %>
+            <h5 class="card-favorite-title"><%= favorite_list.title %></h5>
             <%= button_to favorite_list_path(favorite_list), method: :delete, class: 'btn btn-delete-list' do %>
             X
             <% end %>
