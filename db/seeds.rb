@@ -25,13 +25,14 @@ recipes_data.each do |recipe_data|
     # Format ingredients: Add a newline after "Ingrédients :" and before each ingredient
     if ingredients_part.include?("Ingrédients :")
       ingredients = ingredients_part.split("Ingrédients :")
-      formatted_ingredients = "Ingrédients :<br>" + ingredients[1].gsub(/-/, "<br>-").strip
+      formatted_ingredients = "<h4 style='text-align: center; font-family: Bowlby One'>Ingrédients</h4><br>" + ingredients[1].gsub(/-/, "<br>-").strip
     else
       formatted_ingredients = ingredients_part
     end
 
+
     # Format steps: Add a newline after the steps header and before each step
-    formatted_steps = "#{steps_header}<br>" + steps_part.gsub(/(\d+\.)/, "<br>\\1").strip
+    formatted_steps = "<h4 style='text-align: center; font-family: Bowlby One'>#{steps_header}</h4><br>" + steps_part.gsub(/(\d+\.)/, "<br>\\1").strip
 
     # Combine formatted ingredients and steps
     formatted_description = formatted_ingredients + "<br><br>" + formatted_steps
