@@ -78,7 +78,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #CC4E00;
+  background-color: #DE8B54;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -96,4 +96,21 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.button-connexion {
+  background-color: #DE8B54;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-family: Bowlby One;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+
+.button-link {
+  margin-top: 25vh;
 }

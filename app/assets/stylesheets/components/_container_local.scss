@@ -119,3 +119,17 @@
   font-family: Bowlby one;
   text-align: center;
 }
+
+.container-login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: Bowlby One;
+  color: #582D1D;
+  margin-top: 25vh;
+  // height: 70vh;
+
+  h2 {
+    text-align: center;
+  }
+}
