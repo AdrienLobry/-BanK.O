@@ -57,7 +57,7 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 10;
+  z-index: 100;
   background-color: #DE8B54;
   color: white;
   border-radius: 50%;
@@ -90,4 +90,10 @@ a {
     color: white;
   }
 
+}
+
+.button-back-size{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

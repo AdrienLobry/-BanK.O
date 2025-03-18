@@ -1,6 +1,5 @@
 <h1>Mes Listes de Favoris</h1>
 
-<%= link_to 'Créer une nouvelle liste de favoris', new_favorite_list_path, class: 'btn btn-primary mb-3' %>
 
 <div class="row" data-controller="favorite-list-toggle">
   <% @favorite_lists.each do |favorite_list| %>
@@ -23,11 +22,11 @@
                             <%= link_to meal_path(favorite.meal), class: "card-meal-favorite card-bg-image", style: "background-image: url(#{favorite.meal.photo})" do %>
                               <div class="card-content">
                                 <h2 class="title-meal-card"><%= favorite.meal.name %></h2>
-                                <%= button_to favorite_list_favorite_path(favorite_list, favorite), method: :delete, class: 'btn btn-danger btn-delete' do %>
-                                  X
-                                <% end %>
                               </div>
                             <% end %>
+                      <%= button_to favorite_list_favorite_path(favorite_list, favorite), method: :delete, turbo: false, class: 'btn btn-danger btn-delete' do %>
+                        X
+                      <% end %>
                     </li>
                   <% end %>
                 </ul>
@@ -39,4 +38,8 @@
       </div>
     </div>
   <% end %>
+  <div class="button-back-size">
+    <%= link_to 'Créer', new_favorite_list_path, class: 'button-back' %>
+  </div>
+
 </div>
