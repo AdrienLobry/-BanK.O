@@ -114,15 +114,16 @@
 }
 
 .recipe-button-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   gap: 10px;
   .button-back {
     display: flex;
-    width: 100%;
+    width: 40vw;
     align-items: center;
     font-size: large;
     height: 5vh;
+    justify-content: center;
   }
 }
 
