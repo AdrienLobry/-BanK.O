@@ -1,7 +1,7 @@
 <div class="container-favorite-lists">
   <div class="container-local">
-    <h1>Vos listes de favoris</h1>
-    <div data-controller="favorite-list-toggle">
+    <h1>Vos listes de favoris :</h1>
+    <div class= "all-cards-favorites" data-controller="favorite-list-toggle">
       <% @favorite_lists.each do |favorite_list| %>
         <div>
           <div data-favorite-list-toggle-target="favoriteList" data-action="click->favorite-list-toggle#toggleCard">
@@ -16,24 +16,20 @@
                   <i class="fa-solid fa-trash"></i>
                 <% end %>
               </div>
-              <div class="d-none" data-favorite-list-toggle-target="toggleable">
-                <p><strong>Localisation:</strong> <%= favorite_list.localisation %></p>
+              <div class="d-none card-favorite-list-details" data-favorite-list-toggle-target="toggleable">
                 <% if favorite_list.favorites.any? %>
-                  <h6>Plats dans cette liste :</h6>
-                    <ul>
-                      <% favorite_list.favorites.each do |favorite| %>
-                        <li>
-                          <%= link_to meal_path(favorite.meal), style: "background-image: url(#{favorite.meal.photo})" do %>
-                            <div>
-                              <h2><%= favorite.meal.name %></h2>
-                            </div>
-                          <% end %>
-                          <%= button_to favorite_list_favorite_path(favorite_list, favorite), method: :delete, turbo: false, class:"button-delete" do %>
-                            <i class="fa-solid fa-trash"></i>
-                          <% end %>
-                        </li>
-                      <% end %>
-                    </ul>
+                  <div class="container-cards-index cards-meals-favorite">
+                    <% favorite_list.favorites.each do |favorite| %>
+                      <div class="position-button-fav-card">
+                        <%= link_to meal_path(favorite.meal), class:"card-meal-index card-bg-image card-m card-meals-favorite", style:"background-image: url(#{favorite.meal.photo})" do %>
+                          <h2 class="title-meal-card"><%= favorite.meal.name %></h2>
+                        <% end %>
+                        <%= button_to favorite_list_favorite_path(favorite_list, favorite), method: :delete, class:"button-delete" do %>
+                          <i class="fa-solid fa-trash"></i>
+                        <% end %>
+                      </div>
+                    <% end %>
+                  </div>
                 <% else %>
                   <p>Votre liste est vide!</p>
                 <% end %>

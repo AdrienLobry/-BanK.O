@@ -95,6 +95,12 @@
 
 .position-button-fav-card {
   position: relative;
+
+  form {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+  }
 }
 
 .card-meal-restaurant {
@@ -172,7 +178,11 @@
 
   form {
     position: absolute;
-    top: 5vh;
+    bottom: 1vh;
     right: 1vw;
   }
+}
+
+.card-favorite-list-details {
+  margin-bottom: 15px;
 }

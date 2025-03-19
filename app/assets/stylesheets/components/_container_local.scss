@@ -38,7 +38,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   width: 90vw;
 }
 
@@ -74,6 +74,14 @@
 @media(max-width: 550px) {
   .container-cards-index {
     grid-template-columns: 1fr;
+  }
+
+  .cards-meals-favorite {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-meals-favorite {
+    height: 15vh;
   }
 }
 
@@ -139,6 +147,13 @@
 .container-favorite-lists {
   display: flex;
   justify-content: center;
+
+  h1 {
+    font-family: Bowlby One;
+    font-size: x-large;
+    color: #582D1D;
+    margin-bottom: 15px;
+  }
 }
 
 .container-modal {
