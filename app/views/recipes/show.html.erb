@@ -12,8 +12,8 @@
         <p> <%= @recipe.description.html_safe %></p>
       </div>
       <div class="recipe-button-card" >
-        <%= link_to "Retour à #{@meal.name}", meal_path(@meal), class:"button-back" %>
-        <%= link_to 'Retour aux Plats', meals_path(query: @meal.localisation, Localiser: "Localiser"), class:"button-back" %>
+        <%= link_to "Retour", meal_path(@meal), class:"button-back" %>
+        <%= link_to 'Plats', meals_path(query: @meal.localisation, Localiser: "Localiser"), class:"button-back" %>
       </div>
   </div>
 </div>
