@@ -35,14 +35,15 @@
   }
   .button-recipe {
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     top: 86%; // Adjust as needed
     left: 91%; // Adjust as needed
     transform: translate(-50%, -50%); // Center the icon
     background-color: #DE8B54;
     border-radius: 8px;
     padding: 8px;
-    color: #FFEFD6
+    color: #FFEFD6;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.50);
   }
 }
 
@@ -114,16 +115,15 @@
 }
 
 .recipe-button-card {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   .button-back {
     display: flex;
-    width: 40vw;
+    width: 100%;
     align-items: center;
     font-size: large;
     height: 5vh;
-    justify-content: center;
   }
 }
 
@@ -163,6 +163,7 @@
   .button-form-fav {
     display: flex;
     justify-content: center;
+    text-decoration: none;
   }
 }
 
