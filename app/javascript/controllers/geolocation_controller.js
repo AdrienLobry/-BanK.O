@@ -33,7 +33,7 @@ export default class extends Controller {
       .then(response => response.json())
       .then((data) => {
         // Mise à jour de l'input avec la ville trouvée
-        this.inputCityTarget.value = data.features[2].text + " " + data.features[3].text|| "";
+        this.inputCityTarget.value = data.features[0].place_name;
       })
       .catch(error => console.error("Error fetching location:", error));
   }
