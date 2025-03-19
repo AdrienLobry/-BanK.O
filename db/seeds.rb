@@ -22,27 +22,26 @@ recipes_data.each do |recipe_data|
     # Split into ingredients and steps
     ingredients_part, steps_part = description.split(steps_header)
 
-    # Format ingredients: Add a newline after "Ingrédients :" and before each ingredient
+    # Format ingredients: Wrap in a div with class 'ingredients-container'
     if ingredients_part.include?("Ingrédients :")
       ingredients = ingredients_part.split("Ingrédients :")
-      formatted_ingredients = "<h4 style='text-align: center; font-family: Bowlby One'>Ingrédients</h4>" + ingredients[1].gsub(/-/, "<br>-").strip
+      formatted_ingredients = "<div class='ingredients-container'><h4 style='text-align: center; font-family: Bowlby One'>Ingrédients</h4>" + ingredients[1].gsub(/-/, "<br>-").strip + "</div>"
     else
-      formatted_ingredients = ingredients_part
+      formatted_ingredients = "<div class='ingredients-container'>" + ingredients_part + "</div>"
     end
 
+    # Format steps: Wrap in a div with class 'preparation-steps-container'
+    formatted_steps = "<div class='preparation-steps-container'><h4 style='text-align: center; font-family: Bowlby One'>#{steps_header}</h4>" + steps_part.gsub(/(\d+\.)/, "<br>\\1").strip + "</div>"
 
-    # Format steps: Add a newline after the steps header and before each step
-    formatted_steps = "<h4 style='text-align: center; font-family: Bowlby One'>#{steps_header}</h4>" + steps_part.gsub(/(\d+\.)/, "<br>\\1").strip
-
-    # Combine formatted ingredients and steps
-    formatted_description = formatted_ingredients + formatted_steps
+    # Combine formatted ingredients and steps inside a parent div
+    formatted_description = "<div class='recipe-content'>" + formatted_ingredients + formatted_steps + "</div>"
   else
-    formatted_description = description
+    formatted_description = "<div class='recipe-content'>" + description + "</div>"
   end
 
   Recipe.create!(
     name: recipe_data['name'],
-    description: formatted_description,  # Use the formatted description with <br> tags
+    description: formatted_description,  # Use the formatted description with divs
     photo: recipe_data['photo']
   )
   puts "Recipe created: #{recipe_data['name']}"
