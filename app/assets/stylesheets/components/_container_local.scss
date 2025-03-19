@@ -77,6 +77,12 @@
   }
 }
 
+.recipe-content {
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.250);
+  border-radius: 5px;
+  background-color: #FFF6EA;
+}
 
 .card-recipe-show {
   width: 100%;
@@ -87,15 +93,11 @@
 
 .card-recipe-index {
   height: 300px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   img {
-    width: 70%;
-    border-radius: 10px;
-    object-fit: cover;
-    object-position: center;
+    width: 100vw;
   }
 
 }
@@ -132,4 +134,15 @@
   h2 {
     text-align: center;
   }
+}
+
+
+.container-modal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: Bowlby One;
+  color: #582D1D;
+  margin-top: 25vh;
+  // height: 70vh;
 }
