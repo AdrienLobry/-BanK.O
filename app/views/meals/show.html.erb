@@ -66,7 +66,7 @@
 <div class="meals-show">
   <div class="container-local">
     <div class="meals-button-back">
-      <INPUT TYPE="button" VALUE="Retour" onClick=" history.back();" class="button-back">
+      <%= link_to 'Retour', meals_path(query: @meal.localisation, Localiser: "Localiser"), class:"button-back" %>
     </div>
   </div>
 </div>
