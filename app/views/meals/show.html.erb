@@ -16,15 +16,9 @@
 
 
 <%= link_to favorite_path(@meal), data: {turbo_method: :post}, class: 'button-add-favorite' do %>
-        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart heart"></i>
 <% end %>
-
-
-
 <% end %>
-
-
-
         </a>
       </div>
       <div class="meals-info-body">
@@ -66,7 +60,7 @@
 <div class="meals-show">
   <div class="container-local">
     <div class="meals-button-back">
-      <%= link_to 'Retour', meals_path(query: @meal.localisation, Localiser: "Localiser"), class:"button-back" %>
+      <INPUT TYPE="button" VALUE="Retour" onClick=" history.back();" class="button-back">
     </div>
   </div>
 </div>
