@@ -27,17 +27,18 @@ a {
   color: white;
   background-color: #CC4E00;
   border-radius: 50%;
-  font-size: x-large;
+  font-size: large;
   display: flex;
   justify-content: center;
   position: absolute;
   bottom: 20px;
   right: 20px;
-  width: 1.5em; /* Largeur dépendante du texte */
-  height: 1.5em;
+  width: 2em; /* Largeur dépendante du texte */
+  height: 2em;
   align-items: center;
   font-weight: bold;
   border: none;
+  padding: 10px 10px;
 }
 
 .button-back {
@@ -124,4 +125,8 @@ a {
   border: none;
   color: white;
   border: 1px solid;
+}
+
+.heart {
+  color: white;
 }
