@@ -9,29 +9,30 @@
 
         <!-- modification du bouton de vic pour ouvrir la modale -->
         <% if user_signed_in? %>
-          <button type="button" class="btn btn-primary button-fav" data-bs-toggle="modal" data-bs-target="#addToFavoriteModal_<%= meal.id %>">
-            +
-          </button>
-                  <!-- code de la modale pas du tout piqué sur git -->
-          <div class="modal fade" id="addToFavoriteModal_<%= meal.id %>" tabindex="-1" aria-labelledby="addToFavoriteModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="addToFavoriteModalLabel">Ajouter à une liste de favoris</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <%= form_with url: favorite_path(meal), method: :post do |form| %>
-                    <%= form.hidden_field :meal_id, value: meal.id %>
-                    <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
-                    <%= form.submit 'Ajouter', class: 'btn btn-primary mt-2' %>
-                    <!-- ajouter une liste depuis la modale -->
-                    <%= link_to 'Nouvelle liste', new_favorite_list_path, class: 'btn btn-secondary mt-2' %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
+        <%= link_to "+", favorite_path(meal), data: {turbo_method: :post}, class:"btn btn-primary button-fav"  %>
+                                    <!-- <button type="button" class="btn btn-primary button-fav" data-bs-toggle="modal" data-bs-target="#addToFavoriteModal_<%= meal.id %>">
+                                      +
+                                    </button> -->
+                                     <!-- code de la modale pas du tout piqué sur git -->
+                                      <!--  <div class="modal fade" id="addToFavoriteModal_<%= meal.id %>" tabindex="-1" aria-labelledby="addToFavoriteModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title" id="addToFavoriteModalLabel">Ajouter à une liste de favoris</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                <%= form_with url: favorite_path(meal), method: :post do |form| %>
+                                                  <%= form.hidden_field :meal_id, value: meal.id %>
+                                                  <%= form.collection_select :favorite_list_id, current_user.favorite_lists, :id, :title, prompt: "Sélectionnez une liste de favoris" %>
+                                                  <%= form.submit 'Ajouter', class: 'btn btn-primary mt-2' %>
+                                                   ajouter une liste depuis la modale
+                                                  <%= link_to 'Nouvelle liste', new_favorite_list_path, class: 'btn btn-secondary mt-2' %>
+                                                <% end %>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div> -->
         <% end %>
       </div>
     <% end %>
