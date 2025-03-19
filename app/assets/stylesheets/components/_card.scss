@@ -144,6 +144,35 @@
 
 .random-favorite-image {
   object-fit: cover;
-  width: 50%;
-  border-radius: 50%;
+}
+
+.card-favorite-list-local {
+  background-color:#FFF6EA;
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 9vh;
+  border-radius: 10px;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+
+  h5 {
+    width: 50%;
+    align-items: center;
+    color: #582D1D;
+    margin-bottom: 0px;
+    padding: 10px 15px;
+  }
+
+  img {
+    width: 50%;
+    object-position: center;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  form {
+    position: absolute;
+    top: 5vh;
+    right: 1vw;
+  }
 }
