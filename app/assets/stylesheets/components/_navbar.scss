@@ -18,6 +18,15 @@
   display: none;
 }
 
+.pages-index {
+  .navbar-local {
+    background-color: transparent;
+  }
+  .navbar-lewagon {
+    background-color: transparent;
+  }
+}
+
 .sessions-index .button-login{
   display: none;
 }
