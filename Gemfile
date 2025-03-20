@@ -60,7 +60,7 @@ gem "faker" # pour seed restaurant
 
 # Gem Victor
 gem 'gon'
-
+gem "cloudinary"
 
 
 group :development, :test do
