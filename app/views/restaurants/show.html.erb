@@ -5,8 +5,11 @@
     <h2><%= @restaurant.name.capitalize %></h2>
     <div class="rating">
       <%# Permet d'afficher le bon nombre d'étoile pour le rating %>
+      <%# Si la note est égal 0 %>
+      <% if @rating.to_f == 0 %>
+        <%# Ne pas ajouter de code %>
       <%# Si la note est un entier %>
-      <% if @rating.to_f % 1 == 0 %>
+      <% elsif @rating.to_f % 1 == 0 %>
         <% @rating.to_i.times do %>
           <i class="fa-solid fa-star rating-stars"></i>
         <% end %>
