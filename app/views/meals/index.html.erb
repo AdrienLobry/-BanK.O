@@ -9,11 +9,10 @@
         <% end %>
 
         <!-- modification du bouton de vic pour ouvrir la modale -->
-        <% if user_signed_in? %>
+        <% if user_signed_in? && !current_user.favorites.where(meal: meal).any? %>
         <%= link_to favorite_path(meal), data: {turbo_method: :post}, class:"btn btn-primary button-fav" do %>
         <i class="fa-solid fa-heart heart"></i>
         <% end %>
-
 
         <% end %>
       </div>
@@ -26,3 +25,5 @@
   <i class="fa-solid fa-left-long"></i>
   <% end %>
 </div>
+
+<% console %>

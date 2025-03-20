@@ -11,18 +11,13 @@
           </div>
 
 
-<% if user_signed_in? %>
-
-
-
-
-<%= link_to favorite_path(@meal), data: {turbo_method: :post}, class: 'button-add-favorite' do %>
-        <i class="fa-solid fa-heart heart"></i>
+<% if user_signed_in? && !current_user.favorites.where(meal: @meal).any? %>
+  <%= link_to favorite_path(@meal), data: {turbo_method: :post}, class: 'button-add-favorite' do %>
+    <i class="fa-solid fa-heart heart"></i>
+  <% end %>
 <% end %>
 
 
-
-<% end %>
 
 
 
