@@ -23,6 +23,7 @@
 .meals-show {
   display: flex;
   justify-content: center;
+  padding: 0 20px;
 
   .meals-info-image {
     display: flex;
@@ -31,12 +32,13 @@
   }
   .image-position {
     position: relative;
+    height: 40vh;
   }
   .button-recipe {
     position: absolute;
     z-index: 100;
     bottom: 2vh;
-    right: 1vw;
+    right: 3vw;
     background-color: #DE8B54;
     border-radius: 8px;
     padding: 8px;
@@ -175,4 +177,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.meals-info-body {
+  padding: 0 20px;
 }
