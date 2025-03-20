@@ -3,6 +3,9 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "BanK-O - Trouvez les plats locaux" %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag %>
@@ -15,6 +18,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
     <%= javascript_importmap_tags %>
+    <%= render 'shared/ios_pwa_links' %>
   </head>
 
   <body class="<%= controller_name %>-index">
