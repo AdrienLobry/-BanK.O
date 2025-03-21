@@ -42,6 +42,14 @@
   width: 90vw;
 }
 
+.container-cards-fav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 10px;
+  width: 90vw;
+}
+
 .container-favorites-index { // modif
   position: relative;
   margin-bottom: 20px;

@@ -19,7 +19,7 @@
               </div>
               <div class="d-none card-favorite-list-details" data-favorite-list-toggle-target="toggleable">
                 <% if favorite_list.favorites.any? %>
-                  <div class="container-cards-index cards-meals-favorite">
+                  <div class="container-cards-fav cards-meals-favorite">
                     <% favorite_list.favorites.each do |favorite| %>
                       <div class="position-button-fav-card">
                         <%= link_to meal_path(favorite.meal), class:"card-meal-index card-bg-image card-m card-meals-favorite", style:"background-image: url(#{favorite.meal.photo})" do %>
